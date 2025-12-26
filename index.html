@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti...</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/turn.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".flipbook").turn({
+                acceleration: true,
+                display: "double",
+                duration: 1000,
+                gradients: !$.isTouch,
+                when: {
+                    turning: function (e, page, view) {
+                        const flipbook = document.getElementsByClassName("flipbook");
+                        console.log("Página actual: " + page);
+                    }
+                }
+            });
+
+        });
+        function resizeBook() {
+            const width = Math.min(1200, window.innerWidth * 0.9);
+            const height = Math.min(800, window.innerHeight * 0.85);
+            $(".flipbook").turn("size", width, height);
+        }
+
+        $(window).on("resize", resizeBook);
+        resizeBook();
+
+
+
+    </script>
+</head>
+
+<body>
+    <div class="glass-container">
+        <div class="book-wrapper">
+            <div class="flipbook">
+                <div class="page portada"></div>
+                <div class="page readi"></div>
+                <div class="page puno"></div>
+                <div class="page pdos"></div>
+                <div class="page ptres"></div>
+                <div class="page pcuatro"></div>
+                <div class="page pcinco"></div>
+                <div class="page pseis"></div>
+                <div class="page psiete"></div>
+                <div class="page pocho"></div>
+                <div class="page readd"></div>
+                <div class="page contraportada"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
