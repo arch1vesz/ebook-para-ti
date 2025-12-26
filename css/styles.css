@@ -1,0 +1,183 @@
+/* ===== PANEL GLASS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===== FONDO ===== */
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url("../images/pexels-eberhardgross-1287142.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* ===== PANEL GLASS ===== */
+.glass-container {
+    width: min(92vw, 1300px);
+    height: min(85vh, 900px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.26);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,.45);
+    border-radius: 18px;
+
+    /* ❌ NO overflow hidden */
+}
+
+
+/* ===== CONTENEDOR CON PROPORCIÓN FIJA ===== */
+.book-wrapper {
+    aspect-ratio: 4 / 3; /* CAMBIA AQUÍ */
+
+    max-width: 95%;
+    max-height: 95%;
+
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== AJUSTE INTELIGENTE (NO SE SALE JAMÁS) ===== */
+.book-wrapper {
+    inline-size: min(95%, calc(95vh * (4 / 3)));
+    block-size: min(95%, calc(95vw / (4 / 3)));
+    
+}
+
+/* ===== FLIPBOOK ===== */
+.flipbook {
+    width: 100% !important;
+    height: 100% !important;
+    
+}
+
+/* ===== IMÁGENES ===== */
+.page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== PÁGINAS ===== */
+.flipbook .page {
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+/* ===== IMÁGENES ===== */
+.page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hardd{
+    background-image: url("../images/page_i.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.readi{
+background-image: url("../images/page-i.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.readd{
+background-image: url("../images/page-d.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.readwi{
+    background-image: url("../images/pagew-i.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.readwd{
+    background-image: url("../images/pagew-d.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.portada{
+    background-image: url("../images/pages/portada.png");
+    background-size: cover;
+    background-position: center;
+}
+.puno{
+    background-image: url("../images/pages/p1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pdos{
+    background-image: url("../images/pages/p2.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.ptres{
+    background-image: url("../images/pages/p3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pcuatro{
+    background-image: url("../images/pages/p4.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pcinco{
+    background-image: url("../images/pages/p5.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pseis{
+    background-image: url("../images/pages/p6.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.psiete{
+    background-image: url("../images/pages/p7.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.pocho{
+    background-image: url("../images/pages/p8.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.contraportada{
+    background-image: url("../images/pages/contraportada.png");
+    background-size: cover;
+    background-position: center;
+}
